@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VoipFusion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="css/ios.css" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+    
+    
+    
+    <!-- jQuery library -->
+		
+	
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src = "js/jquery.easing-1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+
+		<!-- iosSlider plugin -->
+		<script src = "js/jquery.iosslider.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+			
+				$('.iosSlider').iosSlider({
+					scrollbar: true,
+					snapToChildren: true,
+					desktopClickDrag: true,
+					scrollbarLocation: 'top',
+					scrollbarMargin: '10px 10px 0 10px',
+					scrollbarBorderRadius: '0',
+					responsiveSlideWidth: true,
+					navSlideSelector: $('.iosSliderButtons .button'),
+					infiniteSlider: true,
+					startAtSlide: '2',
+					onSlideChange: slideContentChange,
+					onSlideComplete: slideContentComplete,
+					onSliderLoaded: slideContentLoaded
+				});
+				
+				function slideContentChange(args) {
+					
+					/* indicator */
+					$(args.sliderObject).parent().find('.iosSliderButtons .button').removeClass('selected');
+					$(args.sliderObject).parent().find('.iosSliderButtons .button:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+					
+				}
+				
+				function slideContentComplete(args) {
+					
+					if(!args.slideChanged) return false;
+					
+					/* animation */
+					$(args.sliderObject).find('.text1, .text2').attr('style', '');
+					
+					$(args.currentSlideObject).children('.text1').animate({
+						right: '100px',
+						opacity: '1'
+					}, 400, 'easeOutQuint');
+					
+					$(args.currentSlideObject).children('.text2').delay(200).animate({
+						right: '50px',
+						opacity: '1'
+					}, 400, 'easeOutQuint');
+					
+				}
+				
+				function slideContentLoaded(args) {
+					
+					/* animation */
+					$(args.sliderObject).find('.text1, .text2').attr('style', '');
+					
+					$(args.currentSlideObject).children('.text1').animate({
+						right: '100px',
+						opacity: '1'
+					}, 400, 'easeOutQuint');
+					
+					$(args.currentSlideObject).children('.text2').delay(200).animate({
+						right: '50px',
+						opacity: '1'
+					}, 400, 'easeOutQuint');
+					
+					/* indicator */
+					$(args.sliderObject).parent().find('.iosSliderButtons .button').removeClass('selected');
+					$(args.sliderObject).parent().find('.iosSliderButtons .button:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+					
+				}
+				
+			});
+		</script>
+        
+       
+
+  </head>
+  <body>
+      <header>
+      	<div class="top">
+      		<div class="logo">
+            	<img src="img/logo.png" alt="logo" />
+            </div>
+            <div class="nav">
+            	<ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a class="active"  href="product.html">PRODUCTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="social">
+            	<ul>
+                <li><a class="fb" href="#">&nbsp;</a></li>
+                <li><a class="tw" href="#">&nbsp;</a></li>
+                </ul>
+            </div>
+           </div>
+           <div class="clearfix">&nbsp;</div>
+      </header>
+      <section>
+      	 <div class="product-slide"><img src="img/sms.jpg" />
+        </div>
+        <div class="home-products-container">
+            <div class="product-products">
+                <h3>PRODUCTS</h3>
+                <ul>
+                	<li><a href="product.html">Voice Termination</a></li>
+                    <li><a href="product_2.html">Soft Switch</a></li>
+                	<li><a href="product_3.html">VPN</a></li>
+                    <li><a href="product_4.html">Bulk SMS</a></li>
+                    </ul>
+            </div>
+            
+            <div class="product-solutions">
+                <ul>
+        
+<li>
+
+<div id="bulk-sms">
+<h3>BULK SMS</h3>
+<h4>Business SMS:</h4>
+<p>Business SMS allows subscribes to send SMS (individual/ Bulk) to any number at any time, from anywhere using the web based application</p>
+<h4>Features:</h4>
+<div class="regular-list">
+<ul>
+<li><img src="img/check.png" />Company branded sender ID</li>
+<li><img src="img/check.png" />One dedicated system administration account</li>
+<li><img src="img/check.png" />Multiuser member accounts (unlimited)</li>
+<li><img src="img/check.png" />Customizable recipient group (unlimited)</li>
+<li><img src="img/check.png" />SMS scheduler-preset any SMS to be delivered at a future date/time</li>
+<li><img src="img/check.png" />Message delivery status report</li>
+<li><img src="img/check.png" />Secured Access (HTTPS Protocol)</li>
+</ul>     
+</div> 
+<div class="clearfix">&nbsp;</div> 
+
+<h4>Web SMS:</h4>
+<p>WebSMS Service is an internet based SMS service. Using WebSMS, registered you can send SMS to a single or multiple recipients any network. Once you’ve logged on, you can send online SMS straight from the interface. It’s the perfect service to communicate with your friends and family– wherever you may be. Forget the small keypad - send messages from any online computer. </p>
+
+<div class="regular-list">
+<ul>
+<li><img src="img/check.png" />After subscription, registered subscribers can send SMS to any subscriber - at any time</li>
+<li><img src="img/check.png" />No mobile phone is required for sending SMS</li>
+<li><img src="img/check.png" />No additional software is required</li>
+<li><img src="img/check.png" />Extremely easy and convenient to use</li>
+<li><img src="img/check.png" />Customizable Phone Book</li>
+<li><img src="img/check.png" />Multiple recipients</li>
+<li><img src="img/check.png" />Message History</li>
+<li><img src="img/check.png" />Maximum of 160 characters per SMS</li>
+<li>
+<a href="javascript:void(0)" class="backtotop">Back to Top</a>
+<script type='text/javascript'>
+jQuery('.backtotop').click(function(){
+	jQuery('html, body').animate({scrollTop:0}, 'slow');
+});
+</script>
+</li>
+</ul>     
+
+</div> 
+
+
+<div class="clearfix">&nbsp;</div> 
+</div>
+</li>
+                </ul>
+                
+               
+            </div>
+          
+          </div>
+          
+          <div class="clearfix">&nbsp;</div>
+          <div class="wide-blue-banner">
+          		<div class="blue-area-container">
+                	<div class="blue-left">
+                    	<h3>PRODUCT<br />
+GALLARY</h3>
+                    </div>
+                    <div class="blue-right">
+                    	<ul>
+                        <li><a href="#"><img src="img/calltermination.jpg" /></a></li>
+                        <li><a href="#"><img src="img/softswitch.jpg" /></a></li>
+                        <li><a href="#"><img src="img/vpnsolution.jpg" /></a></li>
+                        <li><a href="#"><img src="img/bulksmssolution.jpg" /></a></li>
+                    	</ul>
+                    </div>
+                </div>
+            </div>
+          <div class="clearfix">&nbsp;</div>
+          <footer>
+            	<div class="footer-list">
+                	<ul>
+                    <li class="headline">Other solutions	</li>
+                    <li><a href="#">Wired Network Solution</a></li>
+                    <li><a href="#">Wireless Solutions</a></li>
+                    <li><a href="#">VPN Solutions</a></li>
+                     <li><a href="#">VPS Solutions</a></li>
+                    </ul>
+                    
+                    <ul>
+                    <li class="headline">Relavent Links	</li>
+                    <li><a href="#">Voice Termination</a></li>
+                    <li><a href="#">Several Switches</a></li>
+                    <li><a href="#">VPS/ VPP</a></li>
+                     <li><a href="#">Transivers</a></li>
+                    </ul>
+                    
+                    
+                    <ul>
+                    <li class="headline">Quick Links</li>
+                    <li><a href="#">Voice Termination</a></li>
+                    <li><a href="#">Soft Switch</a></li>
+                    <li><a href="#">VPN</a></li>
+                     <li><a href="#">Bulk SMS</a></li>
+                    </ul>
+                    
+                    <ul>
+                    <li class="headline">Contact & Support</li>
+                    <li><a href="#">Terms & Condisions</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">faq</a></li>
+                     <li><a href="#">feedback</a></li>
+                    </ul>
+                    <div class="clearfix">&nbsp;</div>
+
+            </div>
+            
+            <div class="copyright-container">
+            
+            	<div class="copyright">
+            	<p> &copy; 2013 voipfusion . All rights reserved.</p>
+                <div class="copy-links">
+                <ul>
+                	<li>privacy policy</li>
+                    <li>|</li>
+                    <li>terms of use</li>
+                </ul>
+                </div>
+                </div>
+            </div>
+          </footer>
+            
+      </section>
+      
+  </body>
+</html>
